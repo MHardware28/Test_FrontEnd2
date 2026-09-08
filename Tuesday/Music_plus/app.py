@@ -18,9 +18,9 @@ if search_text:
     st.dataframe(filtered_df)
 
 filtered = filtered_df
+#This initializes the filtered data from the csv
 
-#This will now all the user to sort said list in ascending/descending order
-
+#This will now all the user to sort said list in ascending/descending order using a checkbox
 ascending = st.checkbox("Sort in ascending order", value=True)
 filtered = filtered.sort_values("Track name", ascending=ascending)
 st.dataframe(filtered)
